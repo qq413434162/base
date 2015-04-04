@@ -1,0 +1,634 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="shortcut icon" itemprop="image"  href="/favicon.ico" />
+<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE">
+<title>{dede:field.seotitle /}</title>
+<meta name="description" content="{dede:field.description /}" />
+<meta itemprop="name" content="学艺网-学技术学艺术" />
+<meta name="keywords" content="{dede:field.keywords /}" />
+<meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+<meta http-equiv="expires" content="0">
+<link rel="stylesheet" type="text/css" href="{dede:global.cfg_upload_res/}/style/css/stylev2.1.css" />
+<script src="{dede:global.cfg_upload_res/}/style/js/v2/jquery.min.js"></script>
+<script src="{dede:global.cfg_upload_res/}/style/js/v2/jquery-cookie.js"></script>
+</head>
+<body class="category">
+<!--#include virtual="/head.html"-->
+<div class="con-block">
+  <div class="lf">
+    <div class="bx1">
+      <!-- size: 250px * 250px -->
+      <script language='javascript'>
+linkarr = new Array();
+picarr = new Array();
+textarr = new Array();
+var swf_width=250;
+var swf_height=250;
+//文字颜色|文字位置|文字背景颜色|文字背景透明度|按键文字颜色|按键默认颜色|按键当前颜色|自动播放时间|图片过渡效果|是否显示按钮|打开方式
+var configtg='0x000000|2|0x60bc33|50|0xffffff|0xC5DDBC|0x000033|4|3|1|_blank';
+var files = "";
+var links = "";
+var texts = "";
+//这里设置调用标记
+{dede:arclist flag='f' row='5'}
+linkarr[[field:global.autoindex/]] = "[field:arcurl/]";
+picarr[[field:global.autoindex/]]  = "[field:litpic/]";
+textarr[[field:global.autoindex/]] = "[field:shorttitle/]";
+{/dede:arclist}
+for(i=1;i<picarr.length;i++){
+if(files=="") files = picarr[i];
+else files += "|"+picarr[i];
+}
+for(i=1;i<linkarr.length;i++){
+if(links=="") links = linkarr[i];
+else links += "|"+linkarr[i];
+}
+for(i=1;i<textarr.length;i++){
+if(texts=="") texts = textarr[i];
+else texts += "|"+textarr[i];
+}
+document.write('<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ swf_width +'" height="'+ swf_height +'">');
+document.write('<param name="movie" value="{dede:global.cfg_upload_res/}/templets/default/images/bcastr3.swf"><param name="quality" value="high">');
+document.write('<param name="menu" value="false"><param name=wmode value="opaque">');
+document.write('<param name="FlashVars" value="bcastr_file='+files+'&bcastr_link='+links+'&bcastr_title='+texts+'&bcastr_config='+configtg+'">');
+document.write('<embed src="{dede:global.cfg_upload_res/}/templets/default/images/bcastr3.swf" wmode="opaque" FlashVars="bcastr_file='+files+'&bcastr_link='+links+'&bcastr_title='+texts+'&bcastr_config='+configtg+'&menu="false" quality="high" width="'+ swf_width +'" height="'+ swf_height +'" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />'); document.write('</object>');
+</script>
+    </div>
+    <div class="bx2">
+      <div class="bx-title">最新推荐</div>
+      <ul>
+        {dede:arclist flag='a' titlelen=27 row='6' orderby='pubdate'}
+        <li> <a title="[field:fulltitle/]" target="_blank" href="[field:arcurl/]"><img alt="[field:shorttitle/]" width="36" height="36" src="[field:litpic/]" /></a>
+          <p class="pro-name"><a title="[field:fulltitle/]" target="_blank" href="[field:arcurl/]">[field:shorttitle/]</a></p>
+          <p>发布时间：[field:pubdate function="MyDate('Y.m.d',@me)"/]</p>
+        </li>
+        {/dede:arclist}
+      </ul>
+    </div>
+      {dede:ad classify="6"/}
+  </div>
+  <div class="rt">
+    <div class="focus_area">
+      <div class="focus">
+        <div class="block-title">最新头条</div>
+        <ul>
+          {dede:arclist flag='h' limit='0,3' infolen='200'}
+          <li> <a title="[field:fulltitle/]" target="_blank" href="[field:arcurl /]"><img alt="[field:shorttitle/]" width="58" height="58" src="[field:litpic/]" /></a>
+            <h2 class="focus-title"><a title="[field:fulltitle/]" target="_blank" href="[field:arcurl /]"><strong>[field:shorttitle/]</strong></a></h2>
+            <p>[field:info function='cn_substr(@me,108)'/]...</p>
+          </li>
+          {/dede:arclist}
+        </ul>
+      </div>
+      <div class="zhuant">
+        <div class="block-title">往日头条</div>
+        <ul>
+          {dede:arclist flag='h' limit='3,10' infolen='200'}
+          <li><a title="[field:fulltitle/]" target="_blank" href="[field:arcurl/]">[field:shorttitle/]</a></li>
+          {/dede:arclist}
+        </ul>
+      </div>
+    </div>
+    <div class="nlst">
+      <div class="ct">
+        <ul>
+          <li><a href="javascript:;" class="current">最新更新</a></li>
+          <li><a href="javascript:;">最热排行</a></li>
+        </ul>
+        <span></span> </div>
+      <div class="lst lst-1 new-list">
+        <div class="block new-list-1">
+          <ul>
+            {dede:arclist limit='0,9' titlelen=60 noflag='h'}
+            <li class="
+[field:pubdate runphp='yes']  
+$a="new"; 
+$b="";    
+$c=strftime("%d","@me");
+$d=date(d); 
+if($c==$d) @me = $a;  
+else @me = $b;  
+[/field:pubdate]    
+   ">
+            <span class="date"> [field:pubdate runphp='yes']  
+            $a="日"; 
+            $b="今日";    
+            $c=strftime("%Y%m%d","@me");
+            $d=date(Ymd); 
+            $e=strftime("%d","@me");
+            if($c==$d) @me = $b;  
+            else @me = $e.$a;  
+            [/field:pubdate] </span><span class="title"><a title="[field:fulltitle/]" target="_blank" href="[field:arcurl/]">[field:shorttitle/]</a></span>
+            </li>
+            {/dede:arclist}
+          </ul>
+          <ul>
+            {dede:arclist limit='9,9' titlelen=60 noflag='h'}
+            <li class="
+[field:pubdate runphp='yes']  
+$a="new"; 
+$b="";    
+$c=strftime("%d","@me");
+$d=date(d); 
+if($c==$d) @me = $a;  
+else @me = $b;  
+[/field:pubdate]   
+   ">
+            <span class="date">[field:pubdate runphp='yes']  
+            $a="日"; 
+            $b="今日";    
+            $c=strftime("%Y%m%d","@me");
+            $d=date(Ymd); 
+            $e=strftime("%d","@me");
+            if($c==$d) @me = $b;  
+            else @me = $e.$a;  
+            [/field:pubdate]</span><span class="title"><a title="[field:fulltitle/]" target="_blank" href="[field:arcurl/]">[field:shorttitle/]</a></span>
+            </li>
+            {/dede:arclist}
+          </ul>
+          <ul>
+            {dede:arclist limit='18,9' titlelen=60 noflag='h'}
+            <li class="
+[field:pubdate runphp='yes']  
+$a="new"; 
+$b="";    
+$c=strftime("%d","@me");
+$d=date(d); 
+if($c==$d) @me = $a;  
+else @me = $b;  
+[/field:pubdate]   
+   ">
+            <span class="date">[field:pubdate runphp='yes']  
+            $a="日"; 
+            $b="今日";    
+            $c=strftime("%Y%m%d","@me");
+            $d=date(Ymd); 
+            $e=strftime("%d","@me");
+            if($c==$d) @me = $b;  
+            else @me = $e.$a;  
+            [/field:pubdate]</span><span class="title"><a title="[field:fulltitle/]" target="_blank" href="[field:arcurl/]">[field:shorttitle/]</a></span>
+            </li>
+            {/dede:arclist}
+          </ul>
+          <ul>
+            {dede:arclist limit='27,9' titlelen=60 noflag='h'}
+            <li class="
+[field:pubdate runphp='yes']  
+$a="new"; 
+$b="";    
+$c=strftime("%d","@me");
+$d=date(d); 
+if($c==$d) @me = $a;  
+else @me = $b;  
+[/field:pubdate]   
+   ">
+            <span class="date">[field:pubdate runphp='yes']  
+            $a="日"; 
+            $b="今日";    
+            $c=strftime("%Y%m%d","@me");
+            $d=date(Ymd); 
+            $e=strftime("%d","@me");
+            if($c==$d) @me = $b;  
+            else @me = $e.$a;  
+            [/field:pubdate]</span><span class="title"><a title="[field:fulltitle/]" target="_blank" href="[field:arcurl/]">[field:shorttitle/]</a></span>
+            </li>
+            {/dede:arclist}
+          </ul>
+          <ul>
+            {dede:arclist limit='36,9' titlelen=60 noflag='h'}
+            <li class="
+[field:pubdate runphp='yes']  
+$a="new"; 
+$b="";    
+$c=strftime("%d","@me");
+$d=date(d); 
+if($c==$d) @me = $a;  
+else @me = $b;  
+[/field:pubdate]   
+   ">
+            <span class="date">[field:pubdate runphp='yes']  
+            $a="日"; 
+            $b="今日";    
+            $c=strftime("%Y%m%d","@me");
+            $d=date(Ymd); 
+            $e=strftime("%d","@me");
+            if($c==$d) @me = $b;  
+            else @me = $e.$a;  
+            [/field:pubdate]</span><span class="title"><a title="[field:fulltitle/]" target="_blank" href="[field:arcurl/]">[field:shorttitle/]</a></span>
+            </li>
+            {/dede:arclist}
+          </ul>
+          <ul>
+            {dede:arclist limit='45,9' titlelen=60 noflag='h'}
+            <li class="
+[field:pubdate runphp='yes']  
+$a="new"; 
+$b="";    
+$c=strftime("%d","@me");
+$d=date(d); 
+if($c==$d) @me = $a;  
+else @me = $b;  
+[/field:pubdate]   
+   ">
+            <span class="date">[field:pubdate runphp='yes']  
+            $a="日"; 
+            $b="今日";    
+            $c=strftime("%Y%m%d","@me");
+            $d=date(Ymd); 
+            $e=strftime("%d","@me");
+            if($c==$d) @me = $b;  
+            else @me = $e.$a;  
+            [/field:pubdate]</span><span class="title"><a title="[field:fulltitle/]" target="_blank" href="[field:arcurl/]">[field:shorttitle/]</a></span>
+            </li>
+            {/dede:arclist}
+          </ul>
+        </div>
+        <div class="block new-list-2" style="display:none;">
+          <ul>
+            {dede:arclist limit='54,9' titlelen=60 noflag='h'}
+            <li class="
+[field:pubdate runphp='yes']  
+$a="new"; 
+$b="";    
+$c=strftime("%d","@me");
+$d=date(d); 
+if($c==$d) @me = $a;  
+else @me = $b;  
+[/field:pubdate]   
+   ">
+            <span class="date">[field:pubdate runphp='yes']  
+            $a="日"; 
+            $b="今日";    
+            $c=strftime("%Y%m%d","@me");
+            $d=date(Ymd); 
+            $e=strftime("%d","@me");
+            if($c==$d) @me = $b;  
+            else @me = $e.$a;  
+            [/field:pubdate]</span><span class="title"><a title="[field:fulltitle/]" target="_blank" href="[field:arcurl/]">[field:shorttitle/]</a></span>
+            </li>
+            {/dede:arclist}
+          </ul>
+          <ul>
+            {dede:arclist limit='63,9' titlelen=60 noflag='h'}
+            <li class="
+[field:pubdate runphp='yes']  
+$a="new"; 
+$b="";    
+$c=strftime("%d","@me");
+$d=date(d); 
+if($c==$d) @me = $a;  
+else @me = $b;  
+[/field:pubdate]   
+   ">
+            <span class="date">[field:pubdate runphp='yes']  
+            $a="日"; 
+            $b="今日";    
+            $c=strftime("%Y%m%d","@me");
+            $d=date(Ymd); 
+            $e=strftime("%d","@me");
+            if($c==$d) @me = $b;  
+            else @me = $e.$a;  
+            [/field:pubdate]</span><span class="title"><a title="[field:fulltitle/]" target="_blank" href="[field:arcurl/]">[field:shorttitle/]</a></span>
+            </li>
+            {/dede:arclist}
+          </ul>
+          <ul>
+            {dede:arclist limit='72,9' titlelen=60 noflag='h'}
+            <li class="
+[field:pubdate runphp='yes']  
+$a="new"; 
+$b="";    
+$c=strftime("%d","@me");
+$d=date(d); 
+if($c==$d) @me = $a;  
+else @me = $b;  
+[/field:pubdate]   
+   ">
+            <span class="date">[field:pubdate runphp='yes']  
+            $a="日"; 
+            $b="今日";    
+            $c=strftime("%Y%m%d","@me");
+            $d=date(Ymd); 
+            $e=strftime("%d","@me");
+            if($c==$d) @me = $b;  
+            else @me = $e.$a;  
+            [/field:pubdate]</span><span class="title"><a title="[field:fulltitle/]" target="_blank" href="[field:arcurl/]">[field:shorttitle/]</a></span>
+            </li>
+            {/dede:arclist}
+          </ul>
+          <ul>
+            {dede:arclist limit='81,9' titlelen=60 noflag='h'}
+            <li class="
+[field:pubdate runphp='yes']  
+$a="new"; 
+$b="";    
+$c=strftime("%d","@me");
+$d=date(d); 
+if($c==$d) @me = $a;  
+else @me = $b;  
+[/field:pubdate]   
+   ">
+            <span class="date">[field:pubdate runphp='yes']  
+            $a="日"; 
+            $b="今日";    
+            $c=strftime("%Y%m%d","@me");
+            $d=date(Ymd); 
+            $e=strftime("%d","@me");
+            if($c==$d) @me = $b;  
+            else @me = $e.$a;  
+            [/field:pubdate]</span><span class="title"><a title="[field:fulltitle/]" target="_blank" href="[field:arcurl/]">[field:shorttitle/]</a></span>
+            </li>
+            {/dede:arclist}
+          </ul>
+          <ul>
+            {dede:arclist limit='90,9' titlelen=60 noflag='h'}
+            <li class="
+[field:pubdate runphp='yes']  
+$a="new"; 
+$b="";    
+$c=strftime("%d","@me");
+$d=date(d); 
+if($c==$d) @me = $a;  
+else @me = $b;  
+[/field:pubdate]   
+   ">
+            <span class="date">[field:pubdate runphp='yes']  
+            $a="日"; 
+            $b="今日";    
+            $c=strftime("%Y%m%d","@me");
+            $d=date(Ymd); 
+            $e=strftime("%d","@me");
+            if($c==$d) @me = $b;  
+            else @me = $e.$a;  
+            [/field:pubdate]</span><span class="title"><a title="[field:fulltitle/]" target="_blank" href="[field:arcurl/]">[field:shorttitle/]</a></span>
+            </li>
+            {/dede:arclist}
+          </ul>
+          <ul>
+            {dede:arclist limit='99,9' titlelen=60 noflag='h'}
+            <li class="
+[field:pubdate runphp='yes']  
+$a="new"; 
+$b="";    
+$c=strftime("%d","@me");
+$d=date(d); 
+if($c==$d) @me = $a;  
+else @me = $b;  
+[/field:pubdate]   
+   ">
+            <span class="date">[field:pubdate runphp='yes']  
+            $a="日"; 
+            $b="今日";    
+            $c=strftime("%Y%m%d","@me");
+            $d=date(Ymd); 
+            $e=strftime("%d","@me");
+            if($c==$d) @me = $b;  
+            else @me = $e.$a;  
+            [/field:pubdate]</span><span class="title"><a title="[field:fulltitle/]" target="_blank" href="[field:arcurl/]">[field:shorttitle/]</a></span>
+            </li>
+            {/dede:arclist}
+          </ul>
+        </div>
+        <div class="block new-list-3" style="display:none;">
+          <ul>
+            {dede:arclist limit='108,9' titlelen=60 noflag='h'}
+            <li class="
+[field:pubdate runphp='yes']  
+$a="new"; 
+$b="";    
+$c=strftime("%d","@me");
+$d=date(d); 
+if($c==$d) @me = $a;  
+else @me = $b;  
+[/field:pubdate]   
+   ">
+            <span class="date">[field:pubdate runphp='yes']  
+            $a="日"; 
+            $b="今日";    
+            $c=strftime("%Y%m%d","@me");
+            $d=date(Ymd); 
+            $e=strftime("%d","@me");
+            if($c==$d) @me = $b;  
+            else @me = $e.$a;  
+            [/field:pubdate]</span><span class="title"><a title="[field:fulltitle/]" target="_blank" href="[field:arcurl/]">[field:shorttitle/]</a></span>
+            </li>
+            {/dede:arclist}
+          </ul>
+          <ul>
+            {dede:arclist limit='117,9' titlelen=60 noflag='h'}
+            <li class="
+[field:pubdate runphp='yes']  
+$a="new"; 
+$b="";    
+$c=strftime("%d","@me");
+$d=date(d); 
+if($c==$d) @me = $a;  
+else @me = $b;  
+[/field:pubdate]   
+   ">
+            <span class="date">[field:pubdate runphp='yes']  
+            $a="日"; 
+            $b="今日";    
+            $c=strftime("%Y%m%d","@me");
+            $d=date(Ymd); 
+            $e=strftime("%d","@me");
+            if($c==$d) @me = $b;  
+            else @me = $e.$a;  
+            [/field:pubdate]</span><span class="title"><a title="[field:fulltitle/]" target="_blank" href="[field:arcurl/]">[field:shorttitle/]</a></span>
+            </li>
+            {/dede:arclist}
+          </ul>
+          <ul>
+            {dede:arclist limit='126,9' titlelen=60 noflag='h'}
+            <li class="
+[field:pubdate runphp='yes']  
+$a="new"; 
+$b="";    
+$c=strftime("%d","@me");
+$d=date(d); 
+if($c==$d) @me = $a;  
+else @me = $b;  
+[/field:pubdate]   
+   ">
+            <span class="date">[field:pubdate runphp='yes']  
+            $a="日"; 
+            $b="今日";    
+            $c=strftime("%Y%m%d","@me");
+            $d=date(Ymd); 
+            $e=strftime("%d","@me");
+            if($c==$d) @me = $b;  
+            else @me = $e.$a;  
+            [/field:pubdate]</span><span class="title"><a title="[field:fulltitle/]" target="_blank" href="[field:arcurl/]">[field:shorttitle/]</a></span>
+            </li>
+            {/dede:arclist}
+          </ul>
+          <ul>
+            {dede:arclist limit='135,9' titlelen=60 noflag='h'}
+            <li class="
+[field:pubdate runphp='yes']  
+$a="new"; 
+$b="";    
+$c=strftime("%d","@me");
+$d=date(d); 
+if($c==$d) @me = $a;  
+else @me = $b;  
+[/field:pubdate]   
+   ">
+            <span class="date">[field:pubdate runphp='yes']  
+            $a="日"; 
+            $b="今日";    
+            $c=strftime("%Y%m%d","@me");
+            $d=date(Ymd); 
+            $e=strftime("%d","@me");
+            if($c==$d) @me = $b;  
+            else @me = $e.$a;  
+            [/field:pubdate]</span><span class="title"><a title="[field:fulltitle/]" target="_blank" href="[field:arcurl/]">[field:shorttitle/]</a></span>
+            </li>
+            {/dede:arclist}
+          </ul>
+          <ul>
+            {dede:arclist limit='144,9' titlelen=60 noflag='h'}
+            <li class="
+[field:pubdate runphp='yes']  
+$a="new"; 
+$b="";    
+$c=strftime("%d","@me");
+$d=date(d); 
+if($c==$d) @me = $a;  
+else @me = $b;  
+[/field:pubdate]   
+   ">
+            <span class="date">[field:pubdate runphp='yes']  
+            $a="日"; 
+            $b="今日";    
+            $c=strftime("%Y%m%d","@me");
+            $d=date(Ymd); 
+            $e=strftime("%d","@me");
+            if($c==$d) @me = $b;  
+            else @me = $e.$a;  
+            [/field:pubdate]</span><span class="title"><a title="[field:fulltitle/]" target="_blank" href="[field:arcurl/]">[field:shorttitle/]</a></span>
+            </li>
+            {/dede:arclist}
+          </ul>
+          <ul>
+            {dede:arclist limit='153,9' titlelen=60 noflag='h'}
+            <li class="
+[field:pubdate runphp='yes']  
+$a="new"; 
+$b="";    
+$c=strftime("%d","@me");
+$d=date(d); 
+if($c==$d) @me = $a;  
+else @me = $b;  
+[/field:pubdate]   
+   ">
+            <span class="date">[field:pubdate runphp='yes']  
+            $a="日"; 
+            $b="今日";    
+            $c=strftime("%Y%m%d","@me");
+            $d=date(Ymd); 
+            $e=strftime("%d","@me");
+            if($c==$d) @me = $b;  
+            else @me = $e.$a;  
+            [/field:pubdate]</span><span class="title"><a title="[field:fulltitle/]" target="_blank" href="[field:arcurl/]">[field:shorttitle/]</a></span>
+            </li>
+            {/dede:arclist}
+          </ul>
+        </div>
+        <div class="page_nav"> <span class="page_num"> <a href="javascript:void(0)" class="current">1</a> <a href="javascript:void(0)">2</a> <a href="javascript:void(0)">3</a> </span> </div>
+      </div>
+      <div class="lst lst-2 hot-list" style="display:none;">
+        <div class="bx">
+          <h4>48小时阅读榜</h4>
+          <ul>
+            {dede:arclist typeid='top' sort='hot' subday='2' titlelen='38' row='12' orderby='click'}
+            <li><a title="[field:fulltitle/]" target="_blank" href="[field:arcurl/]">[field:shorttitle/]</a></li>
+            {/dede:arclist}
+          </ul>
+        </div>
+        <div class="bx">
+          <h4>周榜</h4>
+          <ul>
+            {dede:arclist typeid='top' sort='hot' subday='7' titlelen='38' row='12' orderby='pubdate'}
+            <li><a title="[field:fulltitle/]" target="_blank" href="[field:arcurl/]">[field:shorttitle/]</a></li>
+            {/dede:arclist}
+          </ul>
+        </div>
+        <div class="bx">
+          <h4>半月榜</h4>
+          <ul>
+            {dede:arclist typeid='top' sort='hot' subday='15' titlelen='38' row='12' orderby='pubdate'}
+            <li><a title="[field:fulltitle/]" target="_blank" href="[field:arcurl/]">[field:shorttitle/]</a></li>
+            {/dede:arclist}
+          </ul>
+        </div>
+        <div class="bx">
+          <h4>月榜</h4>
+          <ul>
+            {dede:arclist typeid='top' sort='hot' subday='30' titlelen='38' row='12' orderby='pubdate'}
+            <li><a title="[field:fulltitle/]" target="_blank" href="[field:arcurl/]">[field:shorttitle/]</a></li>
+            {/dede:arclist}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="con_2">
+  <div class="img_listbox">
+    <h2><span class="block_cate">图文推荐</span></h2>
+    <ul>
+      {dede:arclist typeid='top ' row='7' orderby='pubdate' type='image.' imgwidth='100' imgheight='100'}
+      <li><a title="[field:fulltitle/]" target="_blank" href="[field:arcurl/]">[field:image/]</a><span><a title="[field:fulltitle/]" target="_blank" href="[field:arcurl/]">[field:shorttitle/]</a></span></li>
+      {/dede:arclist}
+    </ul>
+  </div>
+  {dede:channelartlist typeid='1,2'}
+  <div class="listbox">
+    <h2><span class="block_cate"><a target="_blank" href="{dede:field name='typeurl'/}">{dede:field name='typename'/}</a></span><span class="more"><a target="_blank" href="{dede:field name='typeurl'/}">更多...</a></span></h2>
+    <ul>
+      {dede:arclist row='12' titlelen=60}
+      <li class="
+[field:pubdate runphp='yes']  
+$a="new"; 
+$b="";    
+$c=strftime("%d","@me");
+$d=date(d); 
+if($c==$d) @me = $a;  
+else @me = $b;  
+[/field:pubdate]   
+   ">
+      <span class="date">[field:pubdate runphp='yes']  
+      $a="日"; 
+      $b="今日";    
+      $c=strftime("%Y%m%d","@me");
+      $d=date(Ymd); 
+      $e=strftime("%d","@me");
+      if($c==$d) @me = $b;  
+      else @me = $e.$a;  
+      [/field:pubdate]</span><span class="title"><a title="[field:fulltitle/]" target="_blank" href="[field:arcurl/]">[field:shorttitle/]</a></span>
+      </li>
+      {/dede:arclist}
+    </ul>
+  </div>
+  {/dede:channelartlist} </div>
+<!-- 链接 -->
+<div class="lk pre1">
+  <div class="bx2">
+    <p><strong>友情链接（欢迎业界知名网站交换链接）</strong> <a href="http://www.xueyi.cc/link.jpg" target="_blank"><strong style="color:#0033FF;">友情链接联系QQ</strong></a></p>
+    <ul class="link_con">
+      {dede:flink/}
+    </ul>
+  </div>
+</div>
+</div>
+<div id="ft">
+    {dede:ad classify="3"/}
+  <!--#include virtual="/tags.html"-->
+  <!--#include virtual="/footer.html"-->
+</div>
+</body>
+</html>

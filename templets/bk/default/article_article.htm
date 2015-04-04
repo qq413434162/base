@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    {dede:ad classify="1"/}
+<!--#include virtual="/refused/all/headjs.html"-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="shortcut icon" itemprop="image"  href="{dede:global.cfg_basehost/}/favicon.ico" />
+<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE">
+<title>{dede:pagetitle style="pagetitleheader"/}_{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:field.description function='html2text(@me)'/}" />
+<meta name="keywords" content="{dede:field.keywords/}" />
+<meta name="MobileOptimized" content="240"/>
+<link rel="stylesheet" type="text/css" href="{dede:global.cfg_basehost/}/style/css/stylev2.1.css" />
+<link rel="stylesheet" type="text/css" href="{dede:global.cfg_basehost/}/style/css/block.css" />
+<script type="text/javascript" src="{dede:global.cfg_basehost/}/style/js/v2/jquery.min.js"></script>
+<script type="text/javascript" src="{dede:global.cfg_basehost/}/style/js/v2/jquery-cookie.js"></script>
+<script type="text/javascript" src="{dede:global.cfg_basehost/}/style/js/7hot.js"></script>
+</head>
+<body class="single win8">
+<!--#include virtual="/head.html"-->
+<div id="wrapper">
+  <div class="content fl">
+    <div class="content_info">
+      <div class="current_nav">您现在：<a title="{dede:global.cfg_keywords/}" href="{dede:global.cfg_basehost/}/">主页</a> > {dede:type}<a href="[field:global.cfg_basehost/][field:typelink /]">[field:typename /]</a>{/dede:type} > <a title="{dede:field.title/}" href='{dede:global.cfg_basehost/}{dede:field name="arcurl"/}'>{dede:field.shorttitle/}</a></div>
+      <div class="post_title">
+        <h1>{dede:pagetitle style="pagetitle"/}</h1>
+        <span class="pt_info pre1">日期：{dede:field name='pubdate' function='GetDateMk(@me)' /} 出处：{dede:field.source/} 编辑整理：{dede:field.writer/}</span> </div>
+      <!--#include virtual="/refused/free/bn_page_start.html"-->
+      <div class="post_content" id="paragraph">
+        <script src="/style/js/v2/content_set.js"></script>
+        {dede:field.body/} </div>
+      <!--#include virtual="/refused/free/bn_page_sc.html"-->
+      <div id="con_pages">
+        <ul>
+          {dede:pagebreak listsize='2' listitem='info,index,end,pre,next,pageno'/}
+        </ul>
+      </div>
+      <!--#include virtual="/refused/free/bn_page_over.html"-->
+      <!--#include virtual="/refused/free/bn_page_share.html"-->
+      <div class="clear"></div>
+      <div class="hot_tags">TAG：</div>
+      <div class="related_post">
+        <h2>相关文章</h2>
+        <ul class="list_1">
+          {dede:likearticle row='10'}
+          <li><a title="[field:fulltitle/]" target="_blank" href="[field:global.cfg_basehost/][field:arcurl/]">[field:shorttitle/]</a></li>
+          {/dede:likearticle}
+        </ul>
+      </div>
+      <!--#include virtual="/refused/free/bn_page_bot.html"-->
+    </div>
+    <div class="related_post">
+      <h2>栏目推荐</h2>
+      <ul class="list_1">
+        {dede:arclist flag='c' row='10'}
+        <li><a title="[field:fulltitle/]" target="_blank" href="[field:global.cfg_basehost/][field:arcurl/]">[field:shorttitle/]</a></li>
+        {/dede:arclist}
+      </ul>
+    </div>
+    <div class="related_post">
+      <h2>猜你喜欢</h2>
+      <ul class="list_1">
+        {dede:arclist typeid='top' row='20' orderby='rand'}
+        <li><a title="[field:fulltitle/]" target="_blank" href="[field:global.cfg_basehost/][field:arcurl/]">[field:shorttitle/]</a></li>
+        {/dede:arclist}
+      </ul>
+    </div>
+  </div>
+  <!--#include virtual="/refused/free/bn_page_pinglun.html"-->
+  <div class="sidebar">
+    <!--#include virtual="/side.html"-->
+  </div>
+</div>
+</div>
+<div id="ft">
+  <!--#include virtual="/tags.html"-->
+  <!--#include virtual="/footer.html"-->
+</div>
+</body>
+</html>

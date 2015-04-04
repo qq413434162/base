@@ -1,0 +1,3 @@
+User-agent: * 
+Disallow: /x09zhuang26xiu.gotoip1.com
+Disallow: /

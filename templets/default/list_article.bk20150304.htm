@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="shortcut icon" itemprop="image"  href="/favicon.ico" />
+<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE">
+<title>{dede:field.seotitle /}</title>
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}">
+<meta name="keywords" content="{dede:field name='keywords'/}">
+<link rel="stylesheet" type="text/css" href="{dede:global.cfg_upload_res/}/style/css/stylev2.1.css"  />
+<link rel="stylesheet" type="text/css" href="{dede:global.cfg_upload_res/}/style/css/block.css" />
+<script type="text/javascript" src="{dede:global.cfg_upload_res/}/style/js/v2/jquery.min.js"></script>
+<script type="text/javascript" src="{dede:global.cfg_upload_res/}/style/js/v2/jquery-cookie.js"></script>
+<script type="text/javascript" src="{dede:global.cfg_upload_res/}/style/js/7hot.js"></script>
+</head>
+<body class="category">
+<!--#include virtual="/head.html"-->
+<div id="wrapper">
+  <div class="content fl">
+    <div class="current_nav"><span class="cate_current">您现在：</span>
+      <h1>{dede:field.position/}</h1>
+    </div>
+    <div class="cate_list">
+      <ul class="ulcl">
+        {dede:list pagesize='60'}
+        <li><a title="[field:fulltitle/]" target="_blank" href="[field:arcurl/]" class="list_thumbnail"><img alt="[field:shorttitle/]" height="100" width="100" src="[field:litpic/]"></a>
+          <div class="block">
+            <h2><a title="[field:fulltitle/]" target="_blank" href="[field:arcurl/]"><strong>[field:shorttitle/]</strong></a><span class="state other">[field:pubdate function="GetDateMK(@me)"/]</span></h2>
+            <div class="memo">
+              <p>[field:description/]</p>
+            </div>
+            <span class="tags"><strong>Tags：</strong></span></div>
+        </li>
+        {/dede:list}
+      </ul>
+    </div>
+    <div class="page_nav">
+      <div id="Pager" class="pagenew">
+        <div id="con_pages">
+          <ul>
+            {dede:pagelist listsize='2' listitem='info,index,end,pre,next,pageno'/}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sidebar">
+    <!--#include virtual="/side.html"-->
+  </div>
+</div>
+</div>
+</div>
+<div id="ft">
+    {dede:ad classify="3"/}
+  <!--#include virtual="/tags.html"-->
+  <!--#include virtual="/footer.html"-->
+</div>
+</body>
+</html>

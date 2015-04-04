@@ -1,0 +1,12 @@
+begin:1400600434
+sql:INSERT INTO `tail_arctype` (`reid`, `topid`, `sortrank`, `typename`, `typedir`, `isdefault`, `defaultname`, `issend`, `channeltype`, `maxpage`, `ispart`, `corank`, `tempindex`, `templist`, `temparticle`, `namerule`, `namerule2`, `modname`, `description`, `keywords`, `seotitle`, `moresite`, `sitepath`, `siteurl`, `ishidden`, `cross`, `crossid`, `content`, `smalltypes`) VALUES(0, 0, '50', '灯饰', '{cmspath}/dengshi', 1, 'index.html', 1, 1, -1, 1, 0, '{style}/index_article.htm', '{style}/index_list_article.htm', '{style}/article_article.htm', '{typedir}/{Y}/{M}{D}/{aid}.html', '{typedir}/list_{tid}_{page}.html', 'default', '', '', '灯饰', '0', '', '', 0, 0, '', '', '');:rs:1
+sql:INSERT INTO `tail_sgpage`(title,keywords,description,template,likeid,ismake,filename,uptime,body) VALUES('灯饰-head','','','/templets/default/head.htm','default','0','dengshi/head.htm','1400600434',''); :rs:1
+sql:INSERT INTO `tail_sgpage`(title,keywords,description,template,likeid,ismake,filename,uptime,body) VALUES('灯饰-foot','','','/templets/default/footer.htm','default','0','dengshi/foot.htm','1400600434',''); :rs:1
+sql:INSERT INTO `tail_myad`(clsid,typeid,tagname,adname,timeset,starttime,endtime,normbody,expbody) VALUES('1','27','banner1-27','灯饰','0','1400600434','1400600434','','');:rs:1
+sql:INSERT INTO `tail_myad`(clsid,typeid,tagname,adname,timeset,starttime,endtime,normbody,expbody) VALUES('2','27','banner2-27','灯饰','0','1400600434','1400600434','','');:rs:1
+sql:INSERT INTO `tail_myad`(clsid,typeid,tagname,adname,timeset,starttime,endtime,normbody,expbody) VALUES('3','27','banner3-27','灯饰','0','1400600434','1400600434','','');:rs:1
+sql:INSERT INTO `tail_myad`(clsid,typeid,tagname,adname,timeset,starttime,endtime,normbody,expbody) VALUES('4','27','banner4-27','灯饰','0','1400600434','1400600434','','');:rs:1
+sql:INSERT INTO `tail_myad`(clsid,typeid,tagname,adname,timeset,starttime,endtime,normbody,expbody) VALUES('5','27','banner5-27','灯饰','0','1400600434','1400600434','','');:rs:1
+sql:INSERT INTO `tail_myad`(clsid,typeid,tagname,adname,timeset,starttime,endtime,normbody,expbody) VALUES('6','27','banner6-27','灯饰','0','1400600434','1400600434','','');:rs:1
+sql:INSERT INTO `tail_myad`(clsid,typeid,tagname,adname,timeset,starttime,endtime,normbody,expbody) VALUES('7','27','banner7-27','灯饰','0','1400600434','1400600434','','');:rs:1
+end:1400600434

@@ -1,0 +1,1 @@
+<li class="list_pic"><a title="[field:fulltitle/]" target="_blank" href="[field:arcurl/]" class="hn_img"><img src="[field:litpic/]" /></a><a title="[field:fulltitle/]" target="_blank" href="[field:arcurl/]" class="list_title">[field:shorttitle/]</a> </li>

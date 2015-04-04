@@ -1,0 +1,47 @@
+<?php
+$z[0]=Array("ad","",54,77);
+$z[0][4]['classify']="7";
+$z[1]=Array("arclist","\r\n        <li class=\"list_pic\"><a title=\"[field:fulltitle/]\" target=\"_blank\" href=\"[field:arcurl/]\" class=\"hn_img\"><img src=\"[field:litpic/]\" /></a><a title=\"[field:fulltitle/]\" target=\"_blank\" href=\"[field:arcurl/]\" class=\"list_title\">[field:shorttitle/]</a> </li>\r\n        ",312,659);
+$z[1][4]['typeid']="top";
+$z[1][4]['limit']="0,2";
+$z[1][4]['orderby']="pubdate";
+$z[2]=Array("arclist","\r\n        <li class=\"hn_li\"><a title=\"[field:fulltitle/]\" target=\"_blank\" href=\"[field:arcurl/]\">[field:shorttitle/]</a></li>\r\n        ",669,877);
+$z[2][4]['typeid']="top";
+$z[2][4]['limit']="2,10";
+$z[2][4]['orderby']="pubdate";
+$z[3]=Array("arclist","\r\n        <li class=\"hn_li\"><a title=\"[field:fulltitle/]\" target=\"_blank\" href=\"[field:arcurl/]\">[field:shorttitle/]</a></li>\r\n        ",1137,1341);
+$z[3][4]['typeid']="top";
+$z[3][4]['row']="10";
+$z[3][4]['orderby']="pubdate";
+$z[4]=Array("arclist","\r\n    <li><a title=\"[field:fulltitle/]\" target=\"_blank\" href=\"[field:arcurl/]\">[field:shorttitle/]</a></li>\r\n    ",1826,2044);
+$z[4][4]['typeid']="top";
+$z[4][4]['sort']="hot";
+$z[4][4]['subday']="7";
+$z[4][4]['titlelen']="42";
+$z[4][4]['row']="12";
+$z[4][4]['orderby']="pubdate";
+$z[5]=Array("arclist","\r\n    <li><a title=\"[field:fulltitle/]\" target=\"_blank\" href=\"[field:arcurl/]\">[field:shorttitle/]</a></li>\r\n    ",2133,2352);
+$z[5][4]['typeid']="top";
+$z[5][4]['sort']="hot";
+$z[5][4]['subday']="15";
+$z[5][4]['titlelen']="42";
+$z[5][4]['row']="12";
+$z[5][4]['orderby']="pubdate";
+$z[6]=Array("arclist","\r\n      <li><a title=\"[field:fulltitle/]\" target=\"_blank\" href=\"[field:arcurl/]\">[field:shorttitle/]</a></li>\r\n      ",2421,2644);
+$z[6][4]['typeid']="top";
+$z[6][4]['sort']="hot";
+$z[6][4]['subday']="30";
+$z[6][4]['titlelen']="42";
+$z[6][4]['row']="12";
+$z[6][4]['orderby']="pubdate";
+$z[7]=Array("arclist","\r\n      <li><a title=\"[field:fulltitle/]\" target=\"_blank\" href=\"[field:arcurl/]\">[field:shorttitle/]</a></li>\r\n      ",2739,2959);
+$z[7][4]['typeid']="top";
+$z[7][4]['sort']="hot";
+$z[7][4]['subday']="2";
+$z[7][4]['titlelen']="42";
+$z[7][4]['row']="12";
+$z[7][4]['orderby']="click";
+$z[8]=Array("ad","",3089,3112);
+$z[8][4]['classify']="8";
+
+?>

@@ -1,0 +1,87 @@
+<ul>
+<li class="sb_list">
+  <div class="bx">
+	<script language="JavaScript" rel="nofollow" type="text/javascript" src="http://www.xueyi.cc/refused/bn/bn_side_top.js"></script>
+  </div>
+</li>
+<li class="sb_list">
+  <div class="right_con post_right_con">
+    <div class="hotnews_list">
+      <div class="hidden_line"></div>
+      <div class="hn_title">最新发布</div>
+      <ul class="ulcl">
+        {dede:arclist typeid='top' limit='0,2' orderby='pubdate'}
+        <li class="list_pic"><a title="[field:fulltitle/]" target="_blank" href="[field:global.cfg_basehost/][field:arcurl/]" class="hn_img"><img src="[field:global.cfg_basehost/][field:litpic/]" /></a><a title="[field:fulltitle/]" target="_blank" href="[field:global.cfg_basehost/][field:arcurl/]" class="list_title">[field:shorttitle/]</a> </li>
+        {/dede:arclist}
+        {dede:arclist typeid='top' limit='2,10' orderby='pubdate'}
+        <li class="hn_li"><a title="[field:fulltitle/]" target="_blank" href="[field:global.cfg_basehost/][field:arcurl/]">[field:shorttitle/]</a></li>
+        {/dede:arclist}
+      </ul>
+    </div>
+  </div>
+</li>
+<li class="sb_list">
+  <div class="right_con post_right_con">
+    <div class="hotnews_list">
+      <div class="hidden_line"></div>
+      <div class="hn_title">全站推荐</div>
+      <ul class="ulcl">
+        {dede:arclist typeid='top' row='10' orderby='pubdate'}
+        <li class="hn_li"><a title="[field:fulltitle/]" target="_blank" href="[field:global.cfg_basehost/][field:arcurl/]">[field:shorttitle/]</a></li>
+        {/dede:arclist}
+      </ul>
+    </div>
+  </div>
+</li>
+<li class="sb_list">
+<div class="right_con post_right_con ">
+<div class="top_news">
+<div class="bar">
+  <ul>
+    <li id="must" onMouseMove="must()">48小时最热</li>
+    <li id="hot7"  onmousemove="hot7()">7天最热</li>
+    <li id="comm7" onMouseMove="comm7()">半月榜</li>
+    <li id="month" class="current" onMouseMove="month()">月榜</li>
+  </ul>
+</div>
+<div id="con1" class="list" style="display: none; ">
+  <ul>
+    {dede:arclist typeid='top' sort='hot' subday='7' titlelen='42' row='12' orderby='pubdate'}
+    <li><a title="[field:fulltitle/]" target="_blank" href="[field:global.cfg_basehost/][field:arcurl/]">[field:shorttitle/]</a></li>
+    {/dede:arclist}
+  </ul>
+</div>
+<div id="con2" class="list" style="display:none;">
+<ul>
+  <ul>
+    {dede:arclist typeid='top' sort='hot' subday='15' titlelen='42' row='12' orderby='pubdate'}
+    <li><a title="[field:fulltitle/]" target="_blank" href="[field:global.cfg_basehost/][field:arcurl/]">[field:shorttitle/]</a></li>
+    {/dede:arclist}
+  </ul>
+  </div>
+  <div id="con3" class="list">
+    <ul>
+      {dede:arclist typeid='top' sort='hot' subday='30' titlelen='42' row='12' orderby='pubdate'}
+      <li><a title="[field:fulltitle/]" target="_blank" href="[field:global.cfg_basehost/][field:arcurl/]">[field:shorttitle/]</a></li>
+      {/dede:arclist}
+    </ul>
+  </div>
+  <div id="con4" class="list" style="display: none;" >
+    <ul>
+      {dede:arclist typeid='top' sort='hot' subday='2' titlelen='42' row='12' orderby='click'}
+      <li><a title="[field:fulltitle/]" target="_blank" href="[field:global.cfg_basehost/][field:arcurl/]">[field:shorttitle/]</a></li>
+      {/dede:arclist}
+    </ul>
+  </div>
+  </div>
+  </div>
+  </li>
+</ul>
+<ul id="crf1">
+  <li class="sb_list">
+    <div class="bx" >
+	<script language="JavaScript" rel="nofollow" type="text/javascript" src="http://www.xueyi.cc/refused/bn/bn_side_bot1.js"></script>
+    </div>
+  </li>
+  <li class="sb_list"> </li>
+</ul>
